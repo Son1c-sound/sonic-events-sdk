@@ -1,19 +1,41 @@
 {
-  "name": "react-native-events-sdk",
+  "name": "sonic-events",
   "version": "0.0.1",
+  "description": "Function-based TypeScript SDK for tracking events and errors to Discord, Slack, or any webhook",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "build": "bun run tsc -p tsconfig.build.json",
+    "dev": "bun run tsc -p tsconfig.build.json --watch",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "analytics",
+    "tracking",
+    "events",
+    "error-tracking",
+    "discord",
+    "slack",
+    "webhook",
+    "react-native",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chewmate-analytics"
   },
   "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-native": ">=0.70.0"
+    "react": ">=18.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
-    "@types/react-native": "^0.70.0",
     "typescript": "^5.0.0"
   }
 }
